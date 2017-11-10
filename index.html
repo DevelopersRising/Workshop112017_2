@@ -1,0 +1,43 @@
+<!DOCTYPTE html>
+
+
+<html>
+
+<head>
+        <link rel="stylesheet" type="text/css" href="style/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Libre+Barcode+39+Text" rel="stylesheet">
+</head>
+
+<body>
+  <h1> our fancy pink freeCodeCamp slider</h1>
+  <div class="container">
+    <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <img class="mySlides" src="img/one.jpg">
+    <img class="mySlides" src="img/two.jpg">
+    <img class="mySlides" src="img/three.jpg">
+      <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+  </div>
+
+
+
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+  </script>
+</body>
+</html>
